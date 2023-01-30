@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-Welcome to the Drain Games!
+//Welcome to the Drain Games!

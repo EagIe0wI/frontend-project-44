@@ -15,7 +15,7 @@ const calculator = () => {
   }
   
   console.log('Question: ${number1} + ${number2}'); //я не знаю, как сделать рандомный знак
-  let answer = readlineSync.question('Your answer: ');
+  answer = readlineSync.question('Your answer: ');
   if (answer === (number1 + number2)) {
     console.log('Correct!');
   } else {
@@ -25,7 +25,7 @@ const calculator = () => {
   }
   
   console.log('Question: ${number1} + ${number2}'); //я не знаю, как сделать рандомный знак
-  let answer = readlineSync.question('Your answer: ');
+  answer = readlineSync.question('Your answer: ');
   if (answer === (number1 + number2)) {
     console.log('Correct!');
   } else {
