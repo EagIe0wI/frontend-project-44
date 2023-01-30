@@ -14,22 +14,22 @@ const calculator = () => {
     process.exit(0);
   }
   
-  console.log('Question: ${number1} + ${number2}'); //я не знаю, как сделать рандомный знак
+  console.log('Question: ${number1} - ${number2}'); //я не знаю, как сделать рандомный знак
   answer = readlineSync.question('Your answer: ');
-  if (answer === (number1 + number2)) {
+  if (answer === (number1 - number2)) {
     console.log('Correct!');
   } else {
-    console.log("'${answer}' is wrong answer ;(. Correct answer was '${(number1 + number2)}'.");
+    console.log("'${answer}' is wrong answer ;(. Correct answer was '${(number1 - number2)}'.");
     console.log("Let's try again, ${name}!");
     process.exit(0);
   }
   
-  console.log('Question: ${number1} + ${number2}'); //я не знаю, как сделать рандомный знак
+  console.log('Question: ${number1} * ${number2}'); //я не знаю, как сделать рандомный знак
   answer = readlineSync.question('Your answer: ');
-  if (answer === (number1 + number2)) {
+  if (answer === (number1 * number2)) {
     console.log('Correct!');
   } else {
-    console.log("'${answer}' is wrong answer ;(. Correct answer was '${(number1 + number2)}'.");
+    console.log("'${answer}' is wrong answer ;(. Correct answer was '${(number1 * number2)}'.");
     console.log("Let's try again, ${name}!");
     process.exit(0);
   }
