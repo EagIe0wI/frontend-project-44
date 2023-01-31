@@ -4,6 +4,7 @@ import { calculator, getOperator } from '../src/math.js'
 
 export const calc = () => {
   const name = greetings('What is the result of the expression?');
+  console.log('What is the result of the expression?');
 
   for (let i = 0; i < 3; i += 1) {
 
