@@ -1,43 +1,38 @@
-const calculator = () => {
-  console.log('What is the result of the expression?');
-  
-  let number1 = Math.random(100);
-  let number2 = Math.random(100);
-  
-  console.log('Question: ${number1} + ${number2}'); //я не знаю, как сделать рандомный знак
-  let answer = readlineSync.question('Your answer: ');
-  if (answer === (number1 + number2)) {
-    console.log('Correct!');
-  } else {
-    console.log("'${answer}' is wrong answer ;(. Correct answer was '${(number1 + number2)}'.");
-    console.log("Let's try again, ${name}!");
-    process.exit(0);
-  }
-  
-  console.log('Question: ${number1} - ${number2}'); //я не знаю, как сделать рандомный знак
-  answer = readlineSync.question('Your answer: ');
-  if (answer === (number1 - number2)) {
-    console.log('Correct!');
-  } else {
-    console.log("'${answer}' is wrong answer ;(. Correct answer was '${(number1 - number2)}'.");
-    console.log("Let's try again, ${name}!");
-    process.exit(0);
-  }
-  
-  console.log('Question: ${number1} * ${number2}'); //я не знаю, как сделать рандомный знак
-  answer = readlineSync.question('Your answer: ');
-  if (answer === (number1 * number2)) {
-    console.log('Correct!');
-  } else {
-    console.log("'${answer}' is wrong answer ;(. Correct answer was '${(number1 * number2)}'.");
-    console.log("Let's try again, ${name}!");
-    process.exit(0);
-  }
-  
-  console.log('Correct!');
-  console.log('Congratulations, Sam!');
-  
-  process.exit(0);
-}
+import { greetings } from '../src/cli.js';
+import { answerForm, checkAnswer } from '../src/index.js';
+import { calculator, getOperator } from '../src/math.js'
 
-export default calculator
+export const calc = () => {
+  const name = greetings('What is the result of the expression?');
+
+  for (let i = 0; i < 3; i += 1) {
+
+    const operator = getOperator(['+', '-', '*']);
+
+    let number1 = Math.floor(Math.random() * 50);
+    let number2 = Math.floor(Math.random() * 50);
+
+    const example = `${number1} ${operator} ${number2}`;
+    const userAnswer = answerForm(example);
+    let correctAnswer = 0;
+
+    switch (operator) {
+      case '+':
+        correctAnswer = calculator(number1, number2, '+');
+        break;
+
+      case '-':
+        correctAnswer = calculator(number1, number2, '-');
+        break;
+
+      case '*':
+        correctAnswer = calculator(number1, number2, '*');
+        break;
+      
+      default:
+    }
+    if (!checkAnswer(userAnswer, correctAnswer, name, i)) break;
+  }
+}
+calc();
+export default calc;
