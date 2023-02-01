@@ -3,7 +3,7 @@ import { answerForm, checkAnswer } from '../src/index.js';
 import { calculator, getOperator } from '../src/math.js'
 
 export const calc = () => {
-  const name = greetings('What is the result of the expression?');
+  const userName = greetings('What is the result of the expression?');
   console.log('What is the result of the expression?');
 
   for (let i = 0; i < 3; i += 1) {
@@ -32,7 +32,7 @@ export const calc = () => {
       
       default:
     }
-    if (!checkAnswer(userAnswer, correctAnswer, name, i)) break;
+    if (!checkAnswer(userAnswer, correctAnswer, userName, i)) break;
   }
 }
 calc();
