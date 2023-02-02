@@ -1,6 +1,6 @@
 import { greetings } from '../src/cli.js';
 import { answerForm, checkAnswer } from '../src/index.js';
-import { calculator, getOperator } from '../src/math.js'
+import { calculator, getOperator, randomNumbers } from '../src/math.js'
 
 export const calc = () => {
   const userName = greetings('What is the result of the expression?');
@@ -10,8 +10,8 @@ export const calc = () => {
 
     const operator = getOperator(['+', '-', '*']);
 
-    let number1 = Math.floor(Math.random() * 50);
-    let number2 = Math.floor(Math.random() * 50);
+    const number1 = randomNumbers();
+    const number2 = randomNumbers();
 
     const example = `${number1} ${operator} ${number2}`;
     const userAnswer = answerForm(example);
