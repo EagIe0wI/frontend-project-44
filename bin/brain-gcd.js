@@ -1,18 +1,21 @@
-const gcd = () => {
+import { greetings } from '../src/cli.js';
+import { answerForm, checkAnswer } from '../src/index.js';
+import { getDivisor } from '../src/math.js';
+
+export const gcd = () => {
+    const userName = greetings('Find the greatest common divisor of given numbers.');
     console.log('Find the greatest common divisor of given numbers.');
 
-    let number1 = Math.random(100);
-    let number2 = Math.random(100);
+  for (let i = 0; i < 3; i += 1) {
+    let number1 = Math.floor(Math.random() * 50);
+    let number2 = Math.floor(Math.random() * 50);
+    const ex = `${number1} ${number2}`;
+    const userAnswer = answerForm(ex);
+    const correctAnswer = getDivisor(number1, number2);
 
-    console.log('Question: ${number1} ${number2}');
-    let answer = readlineSync.question('Your answer: ');
-    if (answer === '') {
-        console.log('Correct!');
-    } else {
-        console.log("'${answer}' is wrong answer ;(. Correct answer was '${''}'.");
-        console.log("Let's try again, ${name}!");
-        process.exit(0);
-    }
-}
+    if (!checkAnswer(userAnswer, correctAnswer, userName, i)) break;
+  }
+};
 
-export default gcd
+gcd();
+export default gcd;

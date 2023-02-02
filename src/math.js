@@ -12,7 +12,9 @@ export const getOperator = (array) => {
   return operator;
 };
 
-export const getDivisor = (x, y) => {
+export const getDivisor = (number1, number2) => {
+  let x = number1;
+  let y = number2;
   while (x !== y) {
     if (x > y) {
       x -= y;
