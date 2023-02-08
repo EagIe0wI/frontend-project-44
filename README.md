@@ -4,16 +4,16 @@
 <a href="https://codeclimate.com/github/EagIe0wI/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/c3cc8fae09ecf07177e3/maintainability" /></a>
 
 brain- even
-<a href=https://asciinema.org/a/x8dhYCo80mnTgEEucPnwbZkLS><img src=https://asciinema.org/a/x8dhYCo80mnTgEEucPnwbZkLS>
+<script id="asciicast-x8dhYCo80mnTgEEucPnwbZkLS" src="https://asciinema.org/a/x8dhYCo80mnTgEEucPnwbZkLS.js" async></script>
 
 brain-calc
-<a href=https://asciinema.org/a/xFKb6seYl3WUJBsOxgJcRQj7p><img src=https://asciinema.org/a/xFKb6seYl3WUJBsOxgJcRQj7p>
+<script id="asciicast-xFKb6seYl3WUJBsOxgJcRQj7p" src="https://asciinema.org/a/xFKb6seYl3WUJBsOxgJcRQj7p.js" async></script>
 
 brain-gcd
-<a href=https://asciinema.org/a/Ru6vLLPzoXTUyqx3ytYc5GTlX><img src=ttps://asciinema.org/a/Ru6vLLPzoXTUyqx3ytYc5GTlX>
+<script id="asciicast-Ru6vLLPzoXTUyqx3ytYc5GTlX" src="https://asciinema.org/a/Ru6vLLPzoXTUyqx3ytYc5GTlX.js" async></script>
 
 brain-progression
-<a href=https://asciinema.org/a/80awKBH7jePZie7xS0hzcphvy><img src=https://asciinema.org/a/80awKBH7jePZie7xS0hzcphvy>
+<script id="asciicast-80awKBH7jePZie7xS0hzcphvy" src="https://asciinema.org/a/80awKBH7jePZie7xS0hzcphvy.js" async></script>
 
 brain-prime
-<a href=https://asciinema.org/a/maF1aufShu2GquBICXn9FbDDQ><img src=https://asciinema.org/a/maF1aufShu2GquBICXn9FbDDQ>
+<script id="asciicast-maF1aufShu2GquBICXn9FbDDQ" src="https://asciinema.org/a/maF1aufShu2GquBICXn9FbDDQ.js" async></script>
