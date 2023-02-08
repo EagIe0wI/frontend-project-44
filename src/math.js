@@ -35,7 +35,7 @@ export const getDivisor = (number1, number2) => {
 export const progress = (number1, number2) => {
   let result = '';
   const length = randomNumbers(5, 10);
-  const desired = randomNumbers(1, length - 1);
+  const desired = randomNumbers(1, length - 2);
   for (let i = 0; i < length; i += 1) {
     const formula = (number1 + (number2 * i));
     result += (i !== desired) ? `${formula} ` : '.. ';
