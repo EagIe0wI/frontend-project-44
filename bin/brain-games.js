@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-//Welcome to the Drain Games!
 import { greetings } from "../src/cli.js";
+
+console.log('Welcome to the Drain Games!');
 
 greetings();
