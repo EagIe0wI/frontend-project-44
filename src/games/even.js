@@ -2,12 +2,13 @@
 
 import greetings from '../cli.js';
 import { answerForm, checkAnswer } from '../index.js';
-import { magicNumbers } from '../math.js';
+import { randomNumbers } from '../math.js';
 
 const even = () => {
-  const userName = greetings('Answer "yes" if the number is even, otherwise answer "no".');
+  const userName = greetings();
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
-    const randomNumber = magicNumbers();
+    const randomNumber = randomNumbers();
     const userAnswer = answerForm(randomNumber, 'string');
     const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
     if (!checkAnswer(userAnswer, correctAnswer, userName, i)) break;
