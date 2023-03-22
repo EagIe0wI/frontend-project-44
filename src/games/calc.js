@@ -3,8 +3,8 @@ import { answerForm, checkAnswer } from '../src/index.js';
 import { calculator, getOperator, randomNumbers } from '../src/math.js'
 
 export const calc = () => {
-    console.log('What is the result of the expression?');
     const userName = greetings();
+    console.log('What is the result of the expression?');
 
     for (let i = 0; i < 3; i += 1) {
 
