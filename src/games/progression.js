@@ -1,4 +1,4 @@
-import { greetings } from '../cli.js';
+import greetings from '../cli.js';
 import { answerForm, checkAnswer } from '../index.js';
 import { progress, letprogress, randomNumbers } from '../math.js';
 
