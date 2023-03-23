@@ -6,4 +6,9 @@ overrides: []
 parserOptions:
   ecmaVersion: latest
   sourceType: module
-rules: {no-console, import/extensions}
+rules:
+  no-console: 0
+  import/extensions:
+    - error
+    - ignorePackages
+    - js: always
