@@ -1,6 +1,6 @@
-import { greetings } from "../cli.js";
+import { greetings } from '../cli.js';
 import { answerForm, checkAnswer } from '../index.js';
-import { randomNumbers, isPrime } from '../math.js'
+import { randomNumbers, isPrime } from '../math.js';
 
 const prime = () => {
   const userName = greetings('Answer "yes" if given number is prime. Otherwise answer "no".');
@@ -12,6 +12,6 @@ const prime = () => {
 
     if (!checkAnswer(userAnswer, correctAnswer, userName, i)) break;
   }
-}
+};
 
 export default prime;
