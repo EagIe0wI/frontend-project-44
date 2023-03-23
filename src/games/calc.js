@@ -1,6 +1,6 @@
-import { greetings } from '../src/cli.js';
-import { answerForm, checkAnswer } from '../src/index.js';
-import { calculator, getOperator, randomNumbers } from '../src/math.js'
+import { greetings } from '../cli.js';
+import { answerForm, checkAnswer } from '../index.js';
+import { calculator, getOperator, randomNumbers } from '../math.js'
 
 export const calc = () => {
     const userName = greetings();
