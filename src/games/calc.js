@@ -35,5 +35,5 @@ export const calc = () => {
     if (!checkAnswer(userAnswer, correctAnswer, userName, i)) break;
   }
 }
-calc();
+
 export default calc;
