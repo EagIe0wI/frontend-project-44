@@ -1,0 +1,35 @@
+export default (string) => {
+    //  step 1. Выведите количество звезд в переданном файле.
+    const data = string.split('\n');
+    const rows = data.slice(2, data.length).map((row) => row.split(' | '));
+
+    for (let i = 0; i < rows.length; i += 1) {
+        rows[i][0] = rows[i][0].slice(2);
+        rows[i][rows[0].length - 1] = rows[i][rows[0].length - 1].slice(0, rows[i][rows[0].length - 1].length - 2);
+    };
+
+    console.log(`Count: ${rows.length}`);
+
+    //  step 2. Выведите список разных галактик, которые есть в таблице.
+    //  Галактики должны быть отсортированы в алфавитном порядке.
+    const galaxies = rows.map((row) => row[1]);
+
+    const uniques = [];
+    for (let i = 0; i < galaxies.length; i += 1) {
+        if (!uniques.includes(galaxies[i])) {
+        uniques.push(galaxies[i]);
+        }
+    }
+    console.log(`Galaxies: ${uniques.sort().join(', ')}`);
+
+    //  step 3. Выведите самое большое расстояние от звезды из таблицы до Земли и самое маленькое.
+    const distances = rows.map((row) => Number(row[4]));
+    const minDistance = Math.min(...distances);
+    const maxDistance = Math.max(...distances);
+    console.log(`Farest from Earth: ${maxDistance} light years, closest to Earth: ${minDistance} light years`);
+    
+    //  step 4. Выведите имя самой близкой к земле звезды и галактику, к которой она относится.
+    const stars = rows.map((row) => row[0]);
+    const minDistIndex = distances.indexOf(Math.min(...distances));
+    console.log(`Closest to Earth: ${stars[minDistIndex]} in ${galaxies[minDistIndex]} galaxy`);
+}
